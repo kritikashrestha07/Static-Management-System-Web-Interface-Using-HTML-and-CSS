@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Login</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="login.html">Login</a></li>
+    </ul>
+</nav>
+
+<section class="login-box">
+
+    <!-- IMAGE HERE -->
+    <img src="images/The Fool.jfif" alt="Login Logo" width="100">
+
+    <form onsubmit="return checkLogin();">
+        <label>Username</label><br>
+        <input type="text" id="username"><br><br>
+
+        <label>Password</label><br>
+        <input type="password" id="password"><br><br>
+
+        <button type="submit">Login</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Student Management System</p>
+</footer>
+
+<script>
+    function checkLogin() {
+        var user = document.getElementById("username").value;
+        var pass = document.getElementById("password").value;
+
+        if (user === "admin" && pass === "1234") {
+            window.location.href = "index.html";
+            return false;
+        } else {
+            alert("Invalid Username or Password");
+            return false;
+        }
+    }
+</script>
+
+</body>
+</html>
